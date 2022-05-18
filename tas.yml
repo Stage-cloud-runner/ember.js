@@ -1,0 +1,17 @@
+framework: mocha
+tier: small
+
+postMerge:
+  pattern: 
+    - "./node-tests/blueprints/**/*-test.js"
+preMerge:
+  pattern:
+    - "./node-tests/blueprints/**/*-test.js"
+preRun:
+     command:
+        - npm i
+postRun:
+     command:
+        - node --version
+version: 1.0
+parallelism : 1
